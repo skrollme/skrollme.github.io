@@ -1,12 +1,46 @@
-.expander a {
-    font-weight: bold;
-}
+html,
+body {
+  height: 100%; }
 
-.expander a.ext {
+body {
+  display: -ms-flexbox;
+  display: flex; }
+
+.cover-container {
+  max-width: 42em; }
+
+#vita *[class*="exPo"] {
+  display: none; }
+#vita a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none; }
+  #vita a.clicked {
+    font-weight: 200; }
+  #vita a.ext {
     font-weight: 200;
-    border-bottom: 1px dotted #fff;
-}
+    border-bottom: 1px dotted #000; }
+    #vita a.ext:before {
+      margin-right: 3px;
+      font-size: 0.75em; }
 
-.expander .exPo {
-    display: none;
-}
+#profiles .fa-github {
+  color: #24292E; }
+#profiles .fa-npm {
+  color: #FB3B49; }
+#profiles .fa-meetup {
+  color: #F13A59; }
+#profiles .fa-linkedin {
+  color: #0077B5; }
+#profiles .fa-xing {
+  color: #007575; }
+#profiles .fa-lastfm {
+  color: #B90000; }
+#profiles .fa-spotify {
+  color: #1DB954; }
+#profiles .fa-instagram {
+  background-image: radial-gradient(ellipse at bottom left, #ffdc8c 0%, #dc2864 50%, #604ac2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+/*# sourceMappingURL=site.css.map */
