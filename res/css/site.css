@@ -3,26 +3,54 @@ body {
   height: 100%; }
 
 body {
+  background-color: #000;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
+  body * {
+    color: #fff; }
 
 .cover-container {
   max-width: 42em; }
 
-#vita *[class*="exPo"] {
-  display: none; }
-#vita a {
-  font-weight: bold;
-  color: #000;
-  text-decoration: none; }
-  #vita a.clicked {
-    font-weight: 200; }
-  #vita a.ext {
-    font-weight: 200;
-    border-bottom: 1px dotted #000; }
-    #vita a.ext:before {
-      margin-right: 3px;
-      font-size: 0.75em; }
+#background {
+  background: url(/res/bg/bg1.gif) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -5vh;
+  left: -5vw;
+  height: 110vh;
+  width: 110vw;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+  opacity: 0.8; }
+
+#container {
+  max-width: 60vw; }
+
+#vita {
+  text-shadow: 0 0 2px #000; }
+  #vita *[class*="exPo"] {
+    display: none; }
+  #vita a {
+    font-weight: bold;
+    text-decoration: none; }
+    #vita a:hover {
+      color: #fff;
+      border-bottom: 1px dotted #fff; }
+    #vita a.clicked {
+      font-weight: 200; }
+    #vita a.ext {
+      text-decoration: underline;
+      border-bottom: none; }
+      #vita a.ext:before {
+        margin-right: 3px;
+        font-size: 0.75em; }
 
 #profiles .fa-github {
   color: #24292E; }
@@ -42,5 +70,9 @@ body {
   background-image: radial-gradient(ellipse at bottom left, #ffdc8c 0%, #dc2864 50%, #604ac2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+
+footer {
+  text-shadow: 0 0 2px #000;
+  font-size: 0.7em; }
 
 /*# sourceMappingURL=site.css.map */
