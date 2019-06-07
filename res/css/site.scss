@@ -8,17 +8,16 @@ body {
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.2em;
     * {
         color: #fff;
     }
 }
 
-.cover-container {
-    max-width: 42em;
-}
-
 #background {
-    background: url(/res/bg/bg1.gif) no-repeat;
+    background-color: #000;
+    background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     top: -5vh;
@@ -40,6 +39,7 @@ body {
 }
 
 #vita {
+    animation-delay: .2s;
     text-shadow: 0 0 2px #000;
     *[class*="exPo"] {
         display: none;
@@ -66,26 +66,53 @@ body {
 }
 
 #profiles {
-    ul {
-        li {
-
+    animation-delay: .4s;
+    i {
+        text-shadow: 0 0 2px #000;
+        color: #FFF;
+        &:hover {
+            text-shadow: 0 0 10px #000;
         }
     }
-    .fa-github { color: #24292E; }
-    .fa-npm { color: #FB3B49; }
-    .fa-meetup { color: #F13A59; }
-    .fa-linkedin { color: #0077B5; }
-    .fa-xing { color: #007575; }
-    .fa-lastfm { color: #B90000; }
-    .fa-spotify { color: #1DB954; }
-    .fa-instagram {
+    .fa-github:hover { color: #24292E; text-shadow:  0 0 10px #fff; }
+    .fa-npm:hover { color: #FB3B49; }
+    .fa-meetup:hover { color: #F13A59; }
+    .fa-linkedin:hover { color: #0077B5; }
+    .fa-xing:hover { color: #007575; }
+    .fa-magento:hover { color: #f26322; }
+    .fa-lastfm:hover { color: #B90000; }
+    .fa-spotify:hover { color: #1DB954; }
+    .fa-amazon:hover { color: #FEBD68; }
+    .fa-flickr:hover { color: #128fdc; }
+    .fa-playstation:hover { color: #003d91; text-shadow:  0 0 10px #fff; }
+    .fa-steam:hover { color: #171a21; text-shadow:  0 0 10px #fff; }
+    .fa-instagram:hover {
         background-image: radial-gradient(ellipse at bottom left, #ffdc8c 0%,#dc2864 50%,#604ac2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-shadow:  0 0 10px #000;
     }
 }
 
 footer {
     text-shadow: 0 0 2px #000;
-    font-size: 0.7em;
+    font-size: 0.6em;
+    animation-delay: 0.6s;
+}
+
+.animated {
+    animation: fade-in-down .6s;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }
