@@ -21,4 +21,10 @@ $(document).ready(function() {
         $('.exPo'+thisId).css('display','inline');
         return false;
     });
+
+    $('#background-title').hover(function(){
+        $('#background, #container').addClass('clear');
+    },function(){
+        $('#background, #container').removeClass('clear');
+    })
 });

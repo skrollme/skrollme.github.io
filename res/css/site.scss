@@ -26,16 +26,54 @@ body {
     width: 110vw;
     z-index: -1;
     overflow: hidden;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
     opacity: 0.8;
+    &.clear {
+        animation: background-clear 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes background-clear {
+    0% {
+        -webkit-filter: blur(30px);
+        -moz-filter: blur(30px);
+        -o-filter: blur(30px);
+        -ms-filter: blur(30px);
+        filter: blur(30px);
+        opacity: 1;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 0.8;
+    }
 }
 
 #container {
     max-width: 60vw;
+    &.clear {
+        animation: container-clear 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes container-clear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
 }
 
 #vita {
@@ -47,10 +85,10 @@ body {
     a {
         font-weight: bold;
         text-decoration: none;
-        &:hover{
+
             color: #fff;
             border-bottom: 1px dotted #fff;
-        }
+
         &.clicked {
             font-weight: 200;
         }
@@ -98,6 +136,10 @@ footer {
     text-shadow: 0 0 2px #000;
     font-size: 0.6em;
     animation-delay: 0.6s;
+    #background-title {
+        border-bottom: 1px dotted #fff;
+        cursor: pointer;
+    }
 }
 
 .animated {
