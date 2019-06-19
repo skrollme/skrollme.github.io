@@ -27,4 +27,8 @@ $(document).ready(function() {
     },function(){
         $('#background, #container').removeClass('clear');
     })
+
+    $('#imprintModal').on('show.bs.modal', function(){
+       $('.modal-body','#imprintModal').load('/imprint.html');
+    });
 });
