@@ -24,7 +24,7 @@ $(document).ready(function() {
         });
     }
     switchBackground();
-    window.setInterval(function() { switchBackground(); },5000);
+    window.setInterval(function() { switchBackground(); },10000);
 
     $('#background-title').hover(function(){
         $('#background, #container').addClass('clear');
